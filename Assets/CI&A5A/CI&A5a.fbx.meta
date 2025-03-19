@@ -3,7 +3,12 @@ guid: bbb02866713004a988055b5d6459786c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rhino Default Material
+    second: {fileID: 2100000, guid: 9a43b08212b5c45c79d26db5a782095e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

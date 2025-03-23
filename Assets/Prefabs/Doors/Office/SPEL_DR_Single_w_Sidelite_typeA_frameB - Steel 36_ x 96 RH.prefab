@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 2018685585050364521}
   - component: {fileID: 2699334407540994400}
   - component: {fileID: 686538187470389795}
+  - component: {fileID: 2158424046362906085}
   m_Layer: 0
   m_Name: SPEL_DR_Single_w_Sidelite_typeA_frameB - Steel 36_ x 96_ x .001|Object.018|Dupli|3
   m_TagString: Untagged
@@ -415,6 +416,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2158424046362906085
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830506827587450921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.000762, y: 0.00001852091, z: 0.0020161243}
+  m_Center: {x: -0.0013184089, y: 0.00067124073, z: 0.0010239374}
 --- !u!1 &1954425941617919065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1361,10 @@ PrefabInstance:
     - target: {fileID: 1909854008148416898, guid: 276e0995b7a8b4f2b9cc32fcacedfd6b, type: 3}
       propertyPath: DoorType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898682335687537456, guid: 276e0995b7a8b4f2b9cc32fcacedfd6b, type: 3}
+      propertyPath: m_Center.y
+      value: -0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 8969757055954458253, guid: 276e0995b7a8b4f2b9cc32fcacedfd6b, type: 3}
       propertyPath: m_Name

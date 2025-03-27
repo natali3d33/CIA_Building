@@ -713,6 +713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kawneer 350T Med Sgl Door RH
       objectReference: {fileID: 0}
+    - target: {fileID: 2007640666512930273, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6769809456999662206, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8948867
@@ -803,8 +807,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.00084687094, y: 0.00004174112, z: 0.0020537872}
+  m_Center: {x: 0.0000014884315, y: 0.0000038312983, z: 0.0010425616}
 --- !u!4 &8738008103069902842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6769809456999662206, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
@@ -1002,6 +1006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kawneer 350T Med Sgl Door LH
       objectReference: {fileID: 0}
+    - target: {fileID: 2007640666512930273, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6769809456999662206, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8948867
@@ -1063,10 +1071,39 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6769809456999662206, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6153285550715101181}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2007640666512930273, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8378612399316186802}
   m_SourcePrefab: {fileID: 100100000, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
 --- !u!4 &2732984273276575888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6769809456999662206, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
   m_PrefabInstance: {fileID: 8655552768295740142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7188345264087439119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2007640666512930273, guid: a74f1c292928a4fc8bb9447cd1a75fca, type: 3}
+  m_PrefabInstance: {fileID: 8655552768295740142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8378612399316186802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7188345264087439119}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00084687094, y: 0.00004174112, z: 0.0020537872}
+  m_Center: {x: 0.0000014884315, y: 0.0000038312983, z: 0.0010425616}

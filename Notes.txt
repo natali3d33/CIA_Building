@@ -1,15 +1,24 @@
+[Exterior Building Brick]
 Bricks 035
 https://ambientcg.com/a/Bricks035
 
-Exterior Concrete
+[Exterior Concrete]
+Concrete 040
 https://ambientcg.com/a/Concrete040
 
-Interior Polished Concrete
+[Interior Polished Concrete Floors]
 Marble 019
 https://ambientcg.com/a/Marble019
 
+[Pin Boards]
 Fabric 036
 https://ambientcg.com/a/Fabric036
 
+[Museum Floor]
 Wood Floor 050
 https://ambientcg.com/a/WoodFloor050
+
+[Atrium Floor]
+Marble Tiles Seamless Texture #2648
+https://3djungle.net/textures/marble-tiles/2648/
+

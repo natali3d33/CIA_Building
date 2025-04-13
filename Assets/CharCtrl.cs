@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CharCtrl : MonoBehaviour
 {
+    GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -16,8 +17,14 @@ public class CharCtrl : MonoBehaviour
         
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    public void OnXButton()
     {
-        Debug.Log("Hit by " + hit.gameObject.name);
+        gameManager.XButtonPressed();
     }
+
+    public void OnYButton()
+    {
+        gameManager.YButtonPressed();
+    }
+
 }

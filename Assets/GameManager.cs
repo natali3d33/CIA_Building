@@ -6,11 +6,28 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TMP_Text TxtRoomID;
+    [SerializeField] GameObject PanelResetPopUp;
+    [SerializeField] Transform StartingPlayerPosition;
+    GameObject player;
+
+
+    enum ResetState { PLAYING, RESET_REQUESTED, RESET_CONFIRM }
+    ResetState resetState;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        resetState = ResetState.PLAYING;
+
+        //find the player
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length != 1)
+        {
+            Debug.Log("Warning: found " + players.Length + " objects tagged as 'Player'.");
+        }
+        player = null;
+        if (players.Length == 1) Debug.Log("Found 1 Player.");
+        if (players.Length > 0) player = players[0];
     }
 
     // Update is called once per frame
@@ -30,5 +47,46 @@ public class GameManager : MonoBehaviour
         {
             TxtRoomID.text = "";
         }
+    }
+
+    public void XButtonPressed()
+    {
+        //Debug.Log("X button");
+        switch (resetState)
+        {
+            case ResetState.PLAYING:
+                //user has requested a reset
+                PanelResetPopUp.SetActive(true);
+                resetState = ResetState.RESET_REQUESTED;
+                break;
+            case ResetState.RESET_REQUESTED:
+                //user has denied to confirm the request
+                PanelResetPopUp.SetActive(false);
+                resetState = ResetState.PLAYING;
+                break;
+        }
+    }
+
+    public void YButtonPressed()
+    {
+        //Debug.Log("Y button");
+        switch (resetState)
+        {
+            case ResetState.RESET_REQUESTED:
+                //user has confirmed the reset
+                PanelResetPopUp.SetActive(false);
+                reset();
+                resetState = ResetState.PLAYING;
+                break;
+        }
+    }
+
+    private void reset()
+    {
+        player.SetActive(false);
+        player.transform.position = StartingPlayerPosition.position;
+        player.transform.rotation = StartingPlayerPosition.rotation;
+        player.SetActive(true);
+        Debug.Log("Player position reset");
     }
 }

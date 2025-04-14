@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -83,10 +84,14 @@ public class GameManager : MonoBehaviour
 
     private void reset()
     {
+        SceneManager.LoadScene(0);
+        /*
         player.SetActive(false);
         player.transform.position = StartingPlayerPosition.position;
         player.transform.rotation = StartingPlayerPosition.rotation;
         player.SetActive(true);
         Debug.Log("Player position reset");
+        */
+        
     }
 }

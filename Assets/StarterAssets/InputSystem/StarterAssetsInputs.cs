@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -21,9 +22,29 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 
 #if ENABLE_INPUT_SYSTEM
-		public void OnMove(InputValue value)
+
+		public int TimeoutMinutes = 10;
+		int resetCounter = 0;
+
+        private void Start()
+        {
+			InvokeRepeating("IncResetCounter", 60f, 60f);
+        }
+
+		//called every minute
+		void IncResetCounter()
+		{
+			resetCounter++;
+			if (resetCounter == TimeoutMinutes)
+			{
+				SceneManager.LoadScene(0);
+			}
+		}
+
+        public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
+			resetCounter = 0;
 		}
 
 		public void OnLook(InputValue value)
@@ -32,6 +53,7 @@ namespace StarterAssets
 			{
 				LookInput(value.Get<Vector2>());
 			}
+			resetCounter = 0;
 		}
 
 		public void OnJump(InputValue value)
